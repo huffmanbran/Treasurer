@@ -1,0 +1,29 @@
+main: huffmanbran.treasurer.Core
+name: Treasurer
+version: 1.0
+author: huffmanbran, Gary_
+description: Spawn random treasure chests to be looted from anyone!
+commands:
+  treasure:
+    usage: /treasure
+    description: Show treasure menu.
+  treasure deploy:
+    usage: /treasure deploy
+    description: Deploy random treasure chest in the world.
+  treasure reload:
+    usage: /treasure reload
+    description: Reload config & data file.
+  treasure buy:
+    usage: /treasure buy
+    description: Send the player a link to where the chest can be bought.
+permissions:
+  treasure.buy:
+    default: true
+  treasure.treasure:
+    default: true
+  treasure.sendexact:
+    default: false
+  treasure.deploy:
+    default: false
+  treasure.reload:
+    default: false

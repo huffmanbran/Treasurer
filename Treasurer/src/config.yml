@@ -1,0 +1,64 @@
+#Variables you may use for broadcast messages:
+#[<worldname>,<xcord>,<ycord>,<zcord>]
+
+no-permission-msg: '&cYou do not have permission for this command.'
+ 
+#Set this message to your link where they will send REAL money to buy the chest from.
+#Make sure you have the /treasure deploy command run whenever they buy it.
+#You do not need the permission treasure.deploy to run this command.
+#Keep in mind this chest will be deployed for EVERYONE to access if they get to it in time.
+#(First come, first serve)
+buy-link: '&3Set your link to this message in the config.yml'
+
+#Should random chests be spawned periodically?
+allow-auto-spawn-chest: true
+#1 second = 20 ticks
+#1 hour = 6000 ticks
+timer-time-in-ticks: 6000
+
+
+world-name: 'DeepOceans'
+prefix: '&3[&bTreasure&3] '
+broadcast-treasure-msg: '&bA treasure chest has been found near &3<xcord>&b, &3<ycord>&b, &3<zcord>&b!'
+
+#Maximum X,Y,Z coordinate that a chest may be spawned within.
+max-X: 10000
+max-Y: 25 #Values over 256 will not spawn correctly.
+max-Z: 10000
+
+#Minimum X,Y,Z coordinate that a chest may be spawned within.
+#Values are typically always negative.
+min-X: -10000
+#Make sure this value is not greater than max-Y!
+min-Y: 10 #Values under 4 will spawn in bedrock.
+min-Z: -10000
+
+#This is to stop the global broadcast from giving away the exact coordinates.
+#How much should the X,Y,Z coordinate be rounded to?
+#Leave all values at 0 for exact location.
+#It is recommended to change these values frequently!
+offset-X: 0
+offset-Y: 0 #Values under 0 or over 256 would be rather odd.
+offset-Z: 0
+
+#This is a list of what your treasure chest's contents may generate!
+#List of accepted materials here: http://tinyurl.com/okqdcvo
+#The number represents how much of an item has a chance of being spawned in a chest.
+#Values ONLY ABOVE 1 are accepted!
+#Do NOT have more than 28 contents in your chest!
+treasure-contents:
+  dirt: 57
+  stone: 62
+  gold_ingot: 2
+  diamond: 5
+  leash: 2
+  slime_ball: 4
+  slime_block: 3
+  diamond_block: 2
+  iron_ingot: 35
+  dirt: 36
+  cobblestone: 64
+  torch: 12
+  coal: 45
+  coal_block: 10
+  
