@@ -19,17 +19,17 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Core extends JavaPlugin {
 
-	public PluginDescriptionFile pdf;
-	public Location l;
-	public Chest c;
-	public World w;
-	public String xcord,ycord,zcord,message,prefix,wn;
-	public Logger log;
-	public Random r;
-	public ItemStack[] treasureContents;
-	public int offsetX,offsetY,offsetZ;
-	public static int taskid = 0;
-	public boolean allowTimer;
+	private PluginDescriptionFile pdf;
+	private Location l;
+	private Chest c;
+	private World w;
+	private String xcord,ycord,zcord,message,prefix,wn;
+	private Logger log;
+	private Random r;
+	private ItemStack[] treasureContents;
+	private int offsetX,offsetY,offsetZ;
+	private static int taskid = 0;
+	private boolean allowTimer;
 	protected static long delay;
 	
 	public Permission treasureBuy = new Permission("treasure.buy");
@@ -103,7 +103,7 @@ public class Core extends JavaPlugin {
 		
 		int amt = 0;
 
-		List<ItemStack> treasureList = new ArrayList<>();
+	      List<ItemStack> treasureList = new ArrayList<>();
 	      Map<String, Object> configTreasure = settings.config
 	    		  .getConfigurationSection( "treasure-contents" )
 	    		  	.getValues( true );
