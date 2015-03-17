@@ -19,7 +19,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Core extends JavaPlugin {
 
-	private PluginDescriptionFile pdf;
+	public PluginDescriptionFile pdf;
 	private Location l;
 	private Chest c;
 	private World w;
