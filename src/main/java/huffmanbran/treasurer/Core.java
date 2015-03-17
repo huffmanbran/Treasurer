@@ -97,11 +97,12 @@ public class Core extends JavaPlugin {
 		
 		return true;
 	}
+	/*Thanks for writing this method, Gary!*/
 	public void addContents(){
 		
-		/*Thanks for writing this method, Gary!*/
+	      
 		
-		int amt = 0;
+	      int amt = 0;
 
 	      List<ItemStack> treasureList = new ArrayList<>();
 	      Map<String, Object> configTreasure = settings.config
@@ -122,15 +123,11 @@ public class Core extends JavaPlugin {
 	    				 , amt ) );
 	    		  
 	    	  }
-	    	  
-	    		
 
 	      }
-	      
-	      
+
 	      treasureContents = treasureList.toArray( new ItemStack[treasureList.size()] );
-		
-		
+	
 	}
 	
 	public void makeRandomChest(){
