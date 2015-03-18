@@ -54,26 +54,21 @@ public class Core extends JavaPlugin {
 		delay = settings.config.getInt("timer-time-in-ticks");
 		allowTimer = settings.config.getBoolean("allow-auto-spawn-chest");
 		
-		
-		
+		if(allowTimedChests() == false){
+				
+			Bukkit.getScheduler().cancelTask(taskid);
+			log.info("Auto treasure has been set to false, disabling timer.");
+				
+			return;
+		}
 		
 		Core.taskid = Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
 
 			@Override
 			public void run() {
-				
-				if(allowTimedChests() == false){
-					
-					Bukkit.getScheduler().cancelTask(taskid);
-					log.info("Auto treasure has been set to false, disabling timer.");
-					
-					return;
-				}
-				
-				
+
 				makeRandomChest();
-				
-				
+
 			}
 
 		}, delay, delay);
