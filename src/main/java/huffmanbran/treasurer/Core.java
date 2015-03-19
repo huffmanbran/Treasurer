@@ -51,7 +51,7 @@ public class Core extends JavaPlugin {
 		pdf = this.getDescription();
 		r = new Random();
 		wn = settings.config.getString("world-name");
-		delay = settings.config.getInt("timer-time-in-ticks");
+		delay = settings.config.getInt("timer-time-in-seconds");
 		allowTimer = settings.config.getBoolean("allow-auto-spawn-chest");
 		
 		if(allowTimer == false){
@@ -73,7 +73,7 @@ public class Core extends JavaPlugin {
 
 			}
 
-			}, delay, delay);
+			}, delay*20, delay*20);
 		
 		}
 		
