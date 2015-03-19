@@ -24,7 +24,7 @@ public class Core extends JavaPlugin {
 	private Chest c;
 	private World w;
 	private String xcord,ycord,zcord,message,prefix,wn;
-	private Logger log;
+	public Logger log;
 	private Random r;
 	private ItemStack[] treasureContents;
 	private int offsetX,offsetY,offsetZ;
