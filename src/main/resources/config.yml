@@ -12,9 +12,8 @@ buy-link: '&3Set your link to this message in the config.yml'
 
 #Should random chests be spawned periodically?
 allow-auto-spawn-chest: true
-#1 second = 20 ticks
-#1 hour = 6000 ticks
-timer-time-in-ticks: 6000
+#1 hour = 3600 seconds
+timer-time-in-seconds: 3600
 
 
 world-name: 'DeepOceans'
